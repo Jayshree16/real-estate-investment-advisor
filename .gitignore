@@ -1,0 +1,21 @@
+﻿# Virtual env
+venv/
+
+# Models & heavy artifacts
+models/
+*.joblib
+*.pkl
+
+# Large data files
+*.csv
+data/
+
+# MLflow runs folder
+mlruns/
+
+# Python cache
+__pycache__/
+
+# OS files
+.DS_Store
+Thumbs.db
