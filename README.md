@@ -1,117 +1,63 @@
-🏡 Real Estate Investment Advisor
+# 🏠 Real Estate Investment Advisor
 
-Predict investment potential and 5-year future price of Indian properties using machine learning.
+Predict investment potential and a 5-year future price for Indian properties using machine learning.  
+This repo contains the Streamlit UI, a minimal dataset (cleaned CSV) and a downloader script that pulls the large trained ML models from Google Drive so the GitHub repo stays lightweight.
 
-This application provides
-✔️ Good / Not-a-Good investment classification
-✔️ 5-year price prediction
-✔️ Feature importance visualizations
-✔️ Smart property insights
-✔️ Dataset exploration & dashboards
+---
 
-Built using Python, scikit-learn, XGBoost, MLflow, Streamlit.
+## 🚀 Live Features
+- Investment Prediction (Good / Not-a-Good)
+- 5-year Price Estimation
+- Property Explorer (table)
+- Visual Insights Dashboard
+- Feature importance and model metrics
 
+---
 
-🚀 Live Features
-
-Investment Prediction
-
-5-year Price Estimation
-
-Property Explorer
-
-Visual Insights Dashboard
-
-Model Explainability (Feature Importance)
-
-Model Metrics & Documentation
-
-
-📂 Project Structure
+## 📁 Project structure
 REALESTATE-CLEAN/
-│
-├── assets/
-├── data/
-│   └── cleaned_real_estate.csv        # Only dataset included
-│
-├── models/                            # Empty initially → populated after download
-│
-├── pages/                             # Streamlit multipage UI
-│
-├── download_models.py                 # Downloads joblib models from Google Drive
-├── models_config.json                 # Contains drive URLs of trained models
-│
-├── app.py                             # Main Streamlit application
-├── requirements.txt
-├── README.md
-└── .gitignore
+├─ assets/ # UI images/icons
+├─ data/
+│ └─ cleaned_real_estate.csv # small, included dataset
+├─ models/ # initially empty in repo; populated after running download_models.py
+├─ mlruns/ # (excluded from git)
+├─ pages/ # Streamlit multipage UI
+├─ download_models.py # script that fetches joblib models from Google Drive
+├─ models_config.json # maps model names -> Drive URLs (public)
+├─ app.py # main Streamlit app
+├─ requirements.txt
+├─ README.md
+└─ .gitignore
 
 
-📦 Installation & Setup
-1️⃣ Clone the repository
+
+---
+
+## 🔧 Quickstart (local)
+1. Clone:
+```bash
 git clone https://github.com/Jayshree16/real-estate-investment-advisor.git
 cd real-estate-investment-advisor
 
-2️⃣ Create and activate a virtual environment
-Windows:
-python -m venv venv
+2. Create & activate venv
+
+-Windows:python -m venv venv
 venv\Scripts\activate
 
-Mac/Linux:
+
+-macOS / Linux:
 python3 -m venv venv
 source venv/bin/activate
 
-3️⃣ Install dependencies
+3. Install dependencies:
 pip install -r requirements.txt
 
-⬇️ 4️⃣ Download the trained ML models
-
-These models are NOT stored in GitHub (files are large).
-
-Just run:
+4. Download trained ML models (models are not stored on GitHub):
 python download_models.py
+This saves *.joblib files into models/.
 
-This script will:
-
-✔ Download the ML models from Google Drive
-✔ Save them into the models/ folder
-✔ Ensure the app can load all required pipelines
-
-
-▶️ 5️⃣ Run the Streamlit App
+5. Run the app:
 streamlit run app.py
-The dashboard will open in your browser:
-👉 http://localhost:8501
+# then open http://localhost:8501
 
-
-🧠 ML Models Included
-
-The following models are downloaded via Google Drive:
-
-clf_rf_pipeline.joblib – Random Forest Classifier
-
-reg_rf_pipeline.joblib – Random Forest Regressor
-
-preprocessor.joblib – Preprocessing Pipeline
-
-train_test_splits.joblib – Dataset splits for metrics
-
-
-📊 Dataset
-
-Only cleaned_real_estate.csv is included in the repo.
-Other large intermediate CSVs are excluded to keep the repository lightweight.
-
-
-⚙️ Tech Stack
-
-Python, Pandas, NumPy
-
-Scikit-Learn, Random Forest, XGBoost
-
-MLflow for experiment tracking
-
-Streamlit for UI
-
-Joblib for model serialization
 
