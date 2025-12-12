@@ -62,7 +62,7 @@ pip install -r requirements.txt
 
 4. Download trained ML models (models are not stored on GitHub):
 python download_models.py
-This saves *.joblib files into models/.
+# This saves *.joblib files into models/.
 
 5. Run the app:
 streamlit run app.py
