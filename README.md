@@ -21,6 +21,9 @@ REALESTATE-CLEAN/
 │── assets/                 # UI images/icons
 │── data/
 │   └── cleaned_real_estate.csv   # Small, included dataset
+│   └── india_housing_prices.csv
+│   └── real_estate_realistic.csv
+│   └── real_estate_realistic_with_labels.csv
 │
 │── models/                 # Initially empty; populated after running download_models.py
 │
