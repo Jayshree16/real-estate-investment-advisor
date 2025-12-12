@@ -29,17 +29,13 @@ REALESTATE-CLEAN/
 │── pages/                  # Streamlit multipage UI
 │
 │── download_models.py      # Script that downloads ML models from Google Drive
+│── inspect_models.py       # Diagnostic tool
 │── models_config.json      # Maps model names -> Google Drive URLs
 │── app.py                  # Main Streamlit application
 │── requirements.txt        # Project dependencies
 │── README.md
 │── .gitignore
 ```
-
-
-
-
----
 
 ## 🔧 Quickstart (local)
 1. Clone:
@@ -52,7 +48,6 @@ cd real-estate-investment-advisor
 -Windows:python -m venv venv
 venv\Scripts\activate
 
-
 -macOS / Linux:
 python3 -m venv venv
 source venv/bin/activate
@@ -64,8 +59,9 @@ pip install -r requirements.txt
 python download_models.py
 # This saves *.joblib files into models/.
 
-5. Run the app:
+5. Run the script
+python inspect_models.py
+
+6. Run the app:
 streamlit run app.py
 # then open http://localhost:8501
-
-
