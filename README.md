@@ -14,20 +14,28 @@ This repo contains the Streamlit UI, a minimal dataset (cleaned CSV) and a downl
 
 ---
 
-## 📁 Project structure
+## 📁 Project Structure
+
+```text
 REALESTATE-CLEAN/
-├─ assets/ # UI images/icons
-├─ data/
-│ └─ cleaned_real_estate.csv # small, included dataset
-├─ models/ # initially empty in repo; populated after running download_models.py
-├─ mlruns/ # (excluded from git)
-├─ pages/ # Streamlit multipage UI
-├─ download_models.py # script that fetches joblib models from Google Drive
-├─ models_config.json # maps model names -> Drive URLs (public)
-├─ app.py # main Streamlit app
-├─ requirements.txt
-├─ README.md
-└─ .gitignore
+│── assets/                 # UI images/icons
+│── data/
+│   └── cleaned_real_estate.csv   # Small, included dataset
+│
+│── models/                 # Initially empty; populated after running download_models.py
+│
+│── mlruns/                 # Excluded from Git (experiment logs)
+│
+│── pages/                  # Streamlit multipage UI
+│
+│── download_models.py      # Script that downloads ML models from Google Drive
+│── models_config.json      # Maps model names -> Google Drive URLs
+│── app.py                  # Main Streamlit application
+│── requirements.txt        # Project dependencies
+│── README.md
+│── .gitignore
+```
+
 
 
 
