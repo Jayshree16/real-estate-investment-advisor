@@ -1,20 +1,27 @@
-﻿# Virtual env
+﻿# Virtual environment
 venv/
+.env/
 
-# Models & heavy artifacts
-models/
-*.joblib
-*.pkl
+# Model files (downloaded at runtime)
+models/*.joblib
+models/*.pkl
 
-# Large data files
+# Large datasets
 *.csv
-data/
-
-# MLflow runs folder
-mlruns/
+!data/cleaned_real_estate.csv   # allow only this CSV
 
 # Python cache
 __pycache__/
+*.pyc
+
+# Streamlit
+.streamlit/
+
+# MLflow experiments
+mlruns/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
 
 # OS files
 .DS_Store
